@@ -23,3 +23,7 @@ end
 get '/test' do
   "It's a TRAP"
 end
+
+get '/cat' do
+	
+end
