@@ -1,31 +1,37 @@
 require 'sinatra'
 
 get '/' do
-  'Hello!'
+	'Hello!'
 end
 
 get '/secret' do
-  'This is a secret message...do not look!'
+	'This is a secret message...do not look!'
 end
 
 get '/public' do
-  'This is NOT a secret message...have a look!'
+	'This is NOT a secret message...have a look!'
 end
 
 get '/stephen' do
-  "This is Stephen's page!"
+	"This is Stephen's page!"
 end
 
 get '/rolando' do
-  "This is Rolando's page!"
+	"This is Rolando's page!"
 end
 
 get '/test' do
-  "It's a TRAP"
+	"It's a TRAP"
 end
 
-get '/cat' do
-  "<div >
-    <img src='http://bit.ly/1eze8aE' style ='border: 1px dashed red;'>
-   </div>"
+get '/random-cat' do
+	@name = ["Amigo", "Oscar", "Viking"].sample
+
+	erb(:index)
+end
+
+get '/named-cat' do
+	p params[:name]
+	@name = params[:name]
+	erb(:index)
 end
