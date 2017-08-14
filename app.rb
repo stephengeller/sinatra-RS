@@ -19,3 +19,7 @@ end
 get '/rolando' do
   "This is Rolando's page!"
 end
+
+get '/test' do
+  "It's a TRAP"
+end
