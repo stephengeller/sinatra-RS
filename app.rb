@@ -25,5 +25,7 @@ get '/test' do
 end
 
 get '/cat' do
-	
+  "<div >
+    <img src='http://bit.ly/1eze8aE' style ='border: 1px dashed red;'>
+   </div>"
 end
