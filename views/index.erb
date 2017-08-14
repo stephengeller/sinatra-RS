@@ -3,3 +3,14 @@
 <div>
 	<img src='http://bit.ly/1eze8aE' style ='border: 1px dashed red;'>
 </div>
+
+<% if @name.nil? || @name.empty? %>
+	<form action="/named-cat">
+
+		<input type="text" name="name">
+		<input type="submit" name="Submit">
+
+
+	</form>
+<% end %>
+
